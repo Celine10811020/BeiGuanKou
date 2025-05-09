@@ -376,4 +376,6 @@ function setOpition()
     }
     $("button.one").text(RandomNumber);
   }
+
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
 }

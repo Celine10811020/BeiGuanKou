@@ -576,4 +576,6 @@ function setOpition()
     }
     $("button.one").text(Sentence[SentenceRandom]);
   }
+
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
 }
