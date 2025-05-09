@@ -1,0 +1,31 @@
+function initialization()
+{
+  Sentence[0] = "大宋朝文彥博"
+  Sentence[1] = "幼兒倒有灌穴浮球之智"
+  Sentence[2] = "司馬溫公"
+  Sentence[3] = "倒有破瓮救兒之謀"
+  Sentence[4] = "漢孔融"
+  Sentence[5] = "四歲讓梨"
+  Sentence[6] = "懂得謙遜之禮"
+  Sentence[7] = "十三郎五歲朝天"
+  Sentence[8] = "唐劉宴七歲舉翰林"
+  Sentence[9] = "一個正字參朋比"
+  Sentence[10] = "漢黃香九歲溫席奉親"
+  Sentence[11] = "秦甘羅十二歲身為宰相"
+  Sentence[12] = "吳周瑜七歲學文"
+  Sentence[13] = "九歲習武"
+  Sentence[14] = "一十三歲官拜水軍都督"
+  Sentence[15] = "統帶千軍萬馬"
+  Sentence[16] = "執掌六部八十一州之兵權"
+  Sentence[17] = "施苦肉"
+  Sentence[18] = "獻連環"
+  Sentence[19] = "祭東風"
+  Sentence[20] = "借鵰翎"
+  Sentence[21] = "火燒戰船"
+  Sentence[22] = "使曹操望風鼠竄"
+  Sentence[23] = "險些命喪江南"
+  Sentence[24] = "雖有臥龍鳳雛之相幫"
+  Sentence[25] = "那周瑜也算小孩子當中之魁首也"
+
+  Count = 26;
+}
