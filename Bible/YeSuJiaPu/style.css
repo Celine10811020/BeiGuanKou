@@ -90,10 +90,10 @@ button.one, button.two, button.three, button.four, button.restart, button.others
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
-  height: 50px;
+  height: auto;
   margin: 1rem 0;
-  font-size: 1.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   background: var(--button-bg);
   color: var(--text-color);
 }
@@ -126,9 +126,13 @@ button:hover {
     font-size: 1.2rem;
   }
 
-  button.one, button.two, button.three, button.four, button.restart, button.others {
+  button.restart, button.others {
     width: 300px;
-    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  button.one, button.two, button.three, button.four, button.restart, button.others {
+    width: 40vw;
     font-size: 1.2rem;
   }
 }
@@ -159,7 +163,6 @@ button:hover {
 
   button.one, button.two, button.three, button.four, button.restart, button.others {
     width: 80%;
-    height: 50px;
     font-size: 1.2rem;
   }
 }

@@ -90,10 +90,10 @@ button.one, button.two, button.three, button.four, button.restart, button.others
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 50vw;
   height: auto;
   margin: 1rem 0;
-  font-size: 1.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   background: var(--button-bg);
   color: var(--text-color);
 }
@@ -123,6 +123,11 @@ button:hover {
   button.start {
     width: 200px;
     height: 50px;
+    font-size: 1.2rem;
+  }
+
+  button.restart, button.others {
+    width: 300px;
     font-size: 1.2rem;
   }
 
