@@ -28,8 +28,6 @@ function setup()
   SentenceOne.addClass('one');
   SentenceTwo = createP(' ');
   SentenceTwo.addClass('two');
-  SentenceThree = createP(' ');
-  SentenceThree.addClass('three');
 
   ButtonOne = createButton('1');
   ButtonOne.mousePressed(buttonOne_Clicked);
@@ -114,7 +112,6 @@ function buttonStart_Clicked()
 
   SentenceOne.html('3.' + Sentence[SentenceNow-1] + Sentence[SentenceNow]);
   SentenceTwo.html(' ');
-  SentenceThree.html('　');
 
   ButtonOne.show();
   ButtonTwo.show();
