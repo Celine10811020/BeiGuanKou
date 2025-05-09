@@ -781,10 +781,14 @@ function initialization()
   Sentence[778] = "難";
   Sentence[779] = "吁";
   Sentence[780] = "可";
+  Sentence[781] = "噫可";
+  Sentence[782] = "難可";
+  Sentence[783] = "吁可";
+  Sentence[784] = "可可";
 
   var i;
   Count = 19;
-  SentenceCount = 781;
+  SentenceCount = 785;
 
   for(i=0; i<Count; i++)
   {

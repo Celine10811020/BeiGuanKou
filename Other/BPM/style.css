@@ -1,133 +1,195 @@
-html{
-  margin: 5vw;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #2C313C;
+  --secondary-color: #3a3f4b;
+  --text-color: #ffffff;
+  --accent-color: #64ffda;
+  --hover-color: #4a90e2;
+  --title-color: #964696;
+  --button-bg: #707070;
+  --button-hover: #4a90e2;
+}
+
+html {
+  margin: 0;
+  padding: 2rem;
+  min-height: 100vh;
   font-size: 20px;
-  font-family: DFKai-sb;
-  background: #2C313C;
-  color: #DDDDDD;
+  font-family: 'Noto Serif TC', serif;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-color);
 }
 
-p.title{
-  margin-top: 2vw;
-  margin-bottom: 5vw;
-  font-size: 5vw;
-  color: #964696;
+body {
+  margin: 0;
+  padding: 2rem;
+  min-height: 100vh;
+  backdrop-filter: blur(10px);
+}
+
+p.title {
+  margin: 2rem 0 4rem;
+  font-size: 3rem;
+  color: var(--title-color);
   text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-out;
 }
 
-p.successive, p.error{
+p.successive, p.error {
   text-align: left;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-p.one{
-  float: left;
-  margin-bottom: 2vw;
-  font-size: 2.5vw;
+p.one, p.two {
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
   text-align: center;
-}
-p.two{
-  float: left;
-  margin-top: 2vw;
-  margin-bottom: 3vw;
-  font-size: 3.5vw;
-  text-align: center;
-}
-p.three{
-  margin-top: 5vw;
-  margin-bottom: 3vw;
-  font-size: 3.5vw;
-  text-align: center;
+  line-height: 1.6;
 }
 
-button.start{
+p.three {
+  margin: 2rem 0;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  font-family: 'Noto Serif TC', serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button.start {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 10vw;
-  height: 3vw;
-  font-size: 2vw;
-  font-family: DFKai-sb;
-  background: #C0C0C0;
+  width: 200px;
+  height: 50px;
+  font-size: 1.2rem;
+  background: var(--accent-color);
+  color: var(--primary-color);
 }
 
-button.one, button.two, button.three, button.four, button.restart, button.others{
+button.one, button.two, button.three, button.four, button.restart, button.others {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 30vw;
-  height: 4vw;
-  margin-top: 2vw;
-  margin-bottom: 2vw;
-  font-size: 2vw;
-  font-family: DFKai-sb;
-  border: none;
-  background: #707070;
+  width: 300px;
+  height: 50px;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  background: var(--button-bg);
+  color: var(--text-color);
+}
+
+button:hover {
+  background: var(--button-hover);
 }
 
 @media screen and (min-width: 1024px) {
-  p.title{
-    font-size: 5vw;
+  p.title {
+    font-size: 3rem;
   }
 
-  p.successive, p.error{
-    margin-left: 20vw;
-    font-size: 1.5vw;
-    text-align: left;
+  p.successive, p.error {
+    margin: 1rem 20%;
+    font-size: 1.2rem;
   }
 
-  p.one{
-    margin-left: 40vw;
-    margin-top: 2.5vw;
-    font-size: 2.5vw;
-  }
-  p.two{
-    font-size: 3.5vw;
+  p.one, p.two {
+    font-size: 1.5rem;
   }
 
-  button.start{
-    width: 10vw;
-    height: 3vw;
-    font-size: 2vw;
+  p.three {
+    font-size: 2rem;
   }
 
-  button.one, button.two, button.three, button.four, button.restart, button.others{
-    width: 30vw;
-    height: 4vw;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-    font-size: 2vw;
+  button.start {
+    width: 200px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  button.one, button.two, button.three, button.four, button.restart, button.others {
+    width: 300px;
+    height: 50px;
+    font-size: 1.2rem;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  p.title{
-    font-size: 20vw;
+  p.title {
+    font-size: 2rem;
   }
 
-  p.successive, p.error{
-    font-size: 5vw;
-    text-align: left;
+  p.successive, p.error {
+    font-size: 1rem;
+    margin: 1rem 0;
   }
 
-  p.one{
-    margin-left: 25vw;
-    margin-top: 4.5vw;
-    font-size: 11vw;
-  }
-  p.two{
-    font-size: 16vw;
+  p.one, p.two {
+    font-size: 1.2rem;
   }
 
-  button.start{
-    width: 30vw;
-    height: 10vw;
-    font-size: 8vw;
+  p.three {
+    font-size: 1.5rem;
   }
 
-  button.one, button.two, button.three, button.four, button.restart, button.others{
-    width: 60vw;
-    height: 12vw;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-    font-size: 8vw;
+  button.start {
+    width: 200px;
+    height: 50px;
+    font-size: 1.2rem;
   }
+
+  button.one, button.two, button.three, button.four, button.restart, button.others {
+    width: 80%;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
+
+/* 動畫效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 自定義滾動條 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover-color);
 }

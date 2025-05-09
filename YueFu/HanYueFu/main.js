@@ -3,7 +3,7 @@ function setup()
   noCanvas();
 
   Start = 0;
-  PoemIndex = 0;
+  PoemIndex =0;
   SentenceNow = 1;
   Correct = -1;
   Successive = 0;
@@ -369,8 +369,21 @@ function setOpition()
     return;
   }
 
-  var compare;
+  //debug後++的
+  if(StartIndex > EndIndex)
+  {
+    ButtonOne.hide();
+    ButtonTwo.hide();
+    ButtonThree.hide();
+    ButtonFour.hide();
+    ButtonNext.show();
+    ButtonRestart.show();
+    ButtonOthers.show();
 
+    return;
+  }
+
+  var compare;
   Answer = Math.floor(Math.random() * 4) + 1;
   if(Answer == 1)
   {
