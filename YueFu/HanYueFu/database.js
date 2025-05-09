@@ -781,10 +781,14 @@ function initialization()
   Sentence[778] = "難";
   Sentence[779] = "吁";
   Sentence[780] = "可";
-  Sentence[781] = "噫可";
-  Sentence[782] = "難可";
-  Sentence[783] = "吁可";
-  Sentence[784] = "可可";
+  Sentence[781] = "下邪";
+  Sentence[782] = "左邪";
+  Sentence[783] = "右邪";
+  Sentence[784] = "東邪";
+  Sentence[784] = "西邪";
+  Sentence[784] = "南邪";
+  Sentence[784] = "北邪";
+  Sentence[784] = "中邪";
 
   var i;
   Count = 19;
