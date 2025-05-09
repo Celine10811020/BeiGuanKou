@@ -47,6 +47,13 @@ p.successive, p.error {
   transition: all 0.3s ease;
 }
 
+p.poem{
+  margin-top: 2vw;
+  margin-bottom: 5vw;
+  color: #1E8C3C;
+  text-align: center;
+}
+
 p.one, p.two {
   margin: 1.5rem 0;
   font-size: 1.5rem;
@@ -86,14 +93,14 @@ button.start {
   color: var(--primary-color);
 }
 
-button.one, button.two, button.three, button.four, button.restart, button.others {
+button.one, button.two, button.three, button.four, button.next, button.restart, button.others {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
-  height: 50px;
+  height: auto;
   margin: 1rem 0;
-  font-size: 1.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   background: var(--button-bg);
   color: var(--text-color);
 }
@@ -105,6 +112,10 @@ button:hover {
 @media screen and (min-width: 1024px) {
   p.title {
     font-size: 3rem;
+  }
+
+  p.poem{
+    font-size: 3vw;
   }
 
   p.successive, p.error {
@@ -126,9 +137,13 @@ button:hover {
     font-size: 1.2rem;
   }
 
-  button.one, button.two, button.three, button.four, button.restart, button.others {
+  button.restart, button.others {
     width: 300px;
-    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  button.one, button.two, button.three, button.four, button.next, button.restart, button.others {
+    width: 40vw;
     font-size: 1.2rem;
   }
 }
@@ -136,6 +151,10 @@ button:hover {
 @media screen and (max-width: 1024px) {
   p.title {
     font-size: 2rem;
+  }
+
+  p.poem{
+    font-size: 8vw;
   }
 
   p.successive, p.error {
@@ -157,9 +176,8 @@ button:hover {
     font-size: 1.2rem;
   }
 
-  button.one, button.two, button.three, button.four, button.restart, button.others {
+button.one, button.two, button.three, button.four, button.next, button.restart, button.others {
     width: 80%;
-    height: 50px;
     font-size: 1.2rem;
   }
 }
