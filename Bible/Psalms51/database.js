@@ -28,7 +28,7 @@ function initialization()
   Sentence[25] = "塗抹我一切的罪孽。"
   Sentence[26] = "神啊，"
   Sentence[27] = "求你為我造清潔的心，"
-  Sentence[28] = "使我裡面重新有正直（或譯：堅定）的靈。"
+  Sentence[28] = "使我裡面重新有正直的靈。"
   Sentence[29] = "不要丟棄我，"
   Sentence[30] = "使我離開你的面；"
   Sentence[31] = "不要從我收回你的聖靈。"
