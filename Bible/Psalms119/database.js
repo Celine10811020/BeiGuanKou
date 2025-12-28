@@ -67,7 +67,7 @@ function initialization()
   Sentence[64] = "我揀選了忠信的道，";
   Sentence[65] = "將你的典章擺在我面前。";
   Sentence[66] = "我持守你的法度；";
-  Sentence[67] = "耶和華啊";
+  Sentence[67] = "耶和華啊，";
   Sentence[68] = "求你不要叫我羞愧！";
   Sentence[69] = "你開廣我心的時候，";
   Sentence[70] = "我就往你命令的道上直奔。";
