@@ -14,7 +14,7 @@ function setup()
   LastMillis = 0;
   GameOverByTime = 0;
 
-  Title = createP('詩篇全篇');
+  Title = createP('詩篇全篇（限時挑戰）');
   Title.addClass('title');
 
   SuccessiveNumber = createP('連擊：' + Successive + '/' + SuccessiveMax);
@@ -121,7 +121,7 @@ function buttonStart_Clicked()
 {
   TimeLeft = 30;
   TimeNumber.html('時間：' + Math.max(0, Math.ceil(TimeLeft)) + ' 秒');
-  
+
   LastMillis = 0;
   GameOverByTime = 0;
 
