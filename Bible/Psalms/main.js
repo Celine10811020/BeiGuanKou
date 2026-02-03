@@ -10,6 +10,9 @@ function setup()
   Successive = 0;
   SuccessiveMax = 0;
   Error = 0;
+  TimeLeft = 30;
+  LastMillis = 0;
+  GameOverByTime = 0;
 
   Title = createP('詩篇全篇');
   Title.addClass('title');
@@ -19,6 +22,9 @@ function setup()
 
   ErrorNumber = createP('失誤：' + Error);
   ErrorNumber.addClass('error');
+
+  TimeNumber = createP('時間：' + Math.ceil(TimeLeft) + ' 秒');
+  TimeNumber.addClass('time');
 
   ButtonStart = createButton('開始');
   ButtonStart.mousePressed(buttonStart_Clicked);
@@ -62,6 +68,24 @@ function draw()
 {
   if(Start)
   {
+    if(LastMillis == 0)
+    {
+      LastMillis = millis();
+    }
+    var now = millis();
+    var dt = (now - LastMillis) / 1000.0;
+    LastMillis = now;
+
+    TimeLeft -= dt;
+
+    TimeNumber.html('時間：' + Math.max(0, Math.ceil(TimeLeft)) + ' 秒');
+
+    if(TimeLeft <= 0)
+    {
+      endGameByTime();
+      return;
+    }
+
     SentenceOne.html(Sentence[SentenceNow-2]);
     SentenceTwo.html(Sentence[SentenceNow-1]);
 
@@ -95,6 +119,12 @@ function draw()
 
 function buttonStart_Clicked()
 {
+  TimeLeft = 30;
+  TimeNumber.html('時間：' + Math.max(0, Math.ceil(TimeLeft)) + ' 秒');
+  
+  LastMillis = 0;
+  GameOverByTime = 0;
+
   ButtonStart.hide();
   ButtonRestart.hide();
   ButtonOthers.hide();
@@ -119,6 +149,7 @@ function buttonOne_Clicked()
   {
     Successive++;
     Correct = 1;
+    TimeLeft += 3;
     if(Successive > SuccessiveMax)
     {
       SuccessiveMax = Successive;
@@ -128,6 +159,13 @@ function buttonOne_Clicked()
     Successive = 0;
     Error++;
     Correct = 0;
+    TimeLeft -= 5;
+    if(TimeLeft <= 0)
+    {
+      TimeNumber.html('時間：0 秒');
+      endGameByTime();
+      return;
+    }
   }
 
   SentenceNow++;
@@ -143,6 +181,7 @@ function buttonTwo_Clicked()
   {
     Successive++;
     Correct = 1;
+    TimeLeft += 3;
     if(Successive > SuccessiveMax)
     {
       SuccessiveMax = Successive;
@@ -152,6 +191,13 @@ function buttonTwo_Clicked()
     Successive = 0;
     Error++;
     Correct = 0;
+    TimeLeft -= 5;
+    if(TimeLeft <= 0)
+    {
+      TimeNumber.html('時間：0 秒');
+      endGameByTime();
+      return;
+    }
   }
 
   SentenceNow++;
@@ -167,6 +213,7 @@ function buttonThree_Clicked()
   {
     Successive++;
     Correct = 1;
+    TimeLeft += 3;
     if(Successive > SuccessiveMax)
     {
       SuccessiveMax = Successive;
@@ -176,6 +223,13 @@ function buttonThree_Clicked()
     Successive = 0;
     Error++;
     Correct = 0;
+    TimeLeft -= 5;
+    if(TimeLeft <= 0)
+    {
+      TimeNumber.html('時間：0 秒');
+      endGameByTime();
+      return;
+    }
   }
 
   SentenceNow++;
@@ -191,6 +245,7 @@ function buttonFour_Clicked()
   {
     Successive++;
     Correct = 1;
+    TimeLeft += 3;
     if(Successive > SuccessiveMax)
     {
       SuccessiveMax = Successive;
@@ -200,6 +255,13 @@ function buttonFour_Clicked()
     Successive = 0;
     Error++;
     Correct = 0;
+    TimeLeft -= 5;
+    if(TimeLeft <= 0)
+    {
+      TimeNumber.html('時間：0 秒');
+      endGameByTime();
+      return;
+    }
   }
 
   SentenceNow++;
@@ -329,4 +391,22 @@ function setOpition()
   }
 
   window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+}
+
+function endGameByTime()
+{
+  GameOverByTime = 1;
+
+  ButtonOne.hide();
+  ButtonTwo.hide();
+  ButtonThree.hide();
+  ButtonFour.hide();
+  ButtonRestart.show();
+  ButtonOthers.show();
+
+  SentenceThree.html('時間到！遊戲結束！！');
+  $("p.three").css('color', '#C8141E');
+
+  Start = 0;
+  SentenceNow = 1;
 }

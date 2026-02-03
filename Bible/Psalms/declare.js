@@ -23,3 +23,8 @@ var Correct;
 var Successive;
 var SuccessiveMax;
 var Error;
+
+var TimeLeft;
+var LastMillis;
+var TimeNumber;
+var GameOverByTime;

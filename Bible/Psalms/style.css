@@ -38,7 +38,7 @@ p.title {
   animation: fadeIn 0.5s ease-out;
 }
 
-p.successive, p.error {
+p.successive, p.error, p.time {
   text-align: left;
   margin: 1rem 0;
   padding: 1rem;
@@ -107,7 +107,7 @@ button:hover {
     font-size: 3rem;
   }
 
-  p.successive, p.error {
+  p.successive, p.error, p.time {
     margin: 1rem 20%;
     font-size: 1.2rem;
   }
@@ -142,7 +142,7 @@ button:hover {
     font-size: 2rem;
   }
 
-  p.successive, p.error {
+  p.successive, p.error, p.time {
     font-size: 1rem;
     margin: 1rem 0;
   }
