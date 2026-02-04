@@ -10,6 +10,7 @@ function setup()
   Successive = 0;
   SuccessiveMax = 0;
   Error = 0;
+  Score = 0;
   TimeLeft = 30;
   LastMillis = 0;
   GameOverByTime = 0;
@@ -22,6 +23,9 @@ function setup()
 
   ErrorNumber = createP('失誤：' + Error);
   ErrorNumber.addClass('error');
+
+  ScoreNumber = createP('分數：' + Score);
+  ScoreNumber.addClass('score');
 
   TimeNumber = createP('時間：' + Math.ceil(TimeLeft) + ' 秒');
   TimeNumber.addClass('time');
@@ -101,6 +105,7 @@ function draw()
 
     $("p.successive").text('連擊：' + Successive + '/' + SuccessiveMax);
     $("p.error").text('失誤：' + Error);
+    $("p.score").text('分數：' + Score);
   }
 
   if(SentenceNow == Count-1)
@@ -119,9 +124,15 @@ function draw()
 
 function buttonStart_Clicked()
 {
+  Successive = 0;
+  SuccessiveMax = 0;
+  $("p.successive").text('連擊：' + Successive + '/' + SuccessiveMax);
+  Error = 0;
+  $("p.error").text('失誤：' + Error);
+  Score = 0;
+  $("p.score").text('分數：' + Score);
   TimeLeft = 30;
   TimeNumber.html('時間：' + Math.max(0, Math.ceil(TimeLeft)) + ' 秒');
-
   LastMillis = 0;
   GameOverByTime = 0;
 
@@ -149,6 +160,7 @@ function buttonOne_Clicked()
   {
     Successive++;
     Correct = 1;
+    Score += Successive;
     TimeLeft += 3;
     if(Successive > SuccessiveMax)
     {
@@ -181,6 +193,7 @@ function buttonTwo_Clicked()
   {
     Successive++;
     Correct = 1;
+    Score += Successive;
     TimeLeft += 3;
     if(Successive > SuccessiveMax)
     {
@@ -213,6 +226,7 @@ function buttonThree_Clicked()
   {
     Successive++;
     Correct = 1;
+    Score += Successive;
     TimeLeft += 3;
     if(Successive > SuccessiveMax)
     {
@@ -245,6 +259,7 @@ function buttonFour_Clicked()
   {
     Successive++;
     Correct = 1;
+    Score += Successive;
     TimeLeft += 3;
     if(Successive > SuccessiveMax)
     {

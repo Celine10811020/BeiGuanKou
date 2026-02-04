@@ -23,6 +23,8 @@ var Correct;
 var Successive;
 var SuccessiveMax;
 var Error;
+var ScoreNumber;
+var Score;
 
 var TimeLeft;
 var LastMillis;
