@@ -11,7 +11,7 @@ function setup()
   SuccessiveMax = 0;
   Error = 0;
 
-  Title = createP('創世記1');
+  Title = createP('創世紀1');
   Title.addClass('title');
 
   SuccessiveNumber = createP('連擊：' + Successive + '/' + SuccessiveMax);
